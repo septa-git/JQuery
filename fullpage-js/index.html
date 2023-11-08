@@ -1,0 +1,103 @@
+      <!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <title>fullPage.js v4 Demo</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.css'>
+    <link rel='stylesheet' href='https://codepen.io/tutsplus/pen/vYrpEwd.css'><link rel="stylesheet" href="./style.css">
+    </head>
+  <body>
+    <header>
+      <nav>
+        <div class="header-top">
+        <a href="#firstSection" class="logo">
+        <h1>YOUR LOGO</h1>
+        </a>
+        <button type="button" class="toggle-menu" aria-label="Toggle Menu">
+        <i></i>
+        <i></i>
+        <i></i>
+        </button>
+        </div>
+
+        <div class="menu-wrapper">
+          <ul class="menu">
+            <li data-menuanchor="firstSection">
+              <a href="#firstSection">First Section</a>
+            </li>
+            <li data-menuanchor="secondSection">
+              <a href="#secondSection">Second Section</a>
+            </li>
+            <li data-menuanchor="thirdSection">
+              <a href="#thirdSection">Third Section</a>
+            </li>
+            <li data-menuanchor="fourthSection">
+              <a href="#fourthSection">Fourth Section</a>
+            </li>
+            <li data-menuanchor="fifthSection">
+              <a href="#fifthSection">First Slide</a>
+            </li>
+            <li data-menuanchor="fifthSection/1">
+              <a href="#fifthSection/1">Second Slide</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div id="fullpage">
+      <section class="vertical-scrolling">
+        <div class="text-block">
+          <h1>fullPage.js Demo v4</h1>
+          <h3>This is the first section</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          <div class="scroll-down">
+            <p>Jump into the last slide</p>
+            <a href="#fifthSection/1">
+              <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                <path d="M23.245 4l-11.245 14.374-11.219-14.374-.781.619 12 15.381 12-15.391-.755-.609z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="vertical-scrolling">
+        <div class="text-block">
+          <h2>fullPage.js Demo v4</h2>
+          <h3>This is the second section</h3>
+        </div>
+      </section>
+      <section class="vertical-scrolling">
+        <div class="text-block">
+          <h2>fullPage.js Demo v4</h2>
+          <h3>This is the third section</h3>
+        </div>
+      </section>
+      <section class="vertical-scrolling">
+        <div class="text-block">
+          <h2>fullPage.js Demo v4</h2>
+          <h3>This is the fourth section</h3>
+        </div>
+      </section>
+      <section class="vertical-scrolling">
+        <div class="horizontal-scrolling">
+          <div class="text-block">
+            <h2>fullPage.js Demo v4</h2>
+            <h3>This is the fifth section and it contains the first slide (actually section == first slide)</h3>
+          </div>
+        </div>
+        <div class="horizontal-scrolling">
+          <div class="text-block">
+            <h2>fullPage.js Demo v4</h2>
+            <h3>This is the second slide</h3>
+            <p class="end">Thank you!</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.min.js'></script><script  src="./script.js"></script>
+  </body>
+</html>

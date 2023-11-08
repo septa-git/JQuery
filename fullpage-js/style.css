@@ -1,0 +1,256 @@
+/* RESET-GENERAL STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+/* MENU STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.header-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 10px;
+  z-index: 12;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 47, 77, 0.3);
+}
+
+.header-top .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-top .toggle-menu {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.header-top .toggle-menu i {
+  position: absolute;
+  left: 10px;
+  width: 30px;
+  height: 2px;
+  background: white;
+  transition: all 0.3s;
+}
+
+.header-top .toggle-menu i:nth-child(1) {
+  top: 16px;
+}
+
+.header-top .toggle-menu i:nth-child(2) {
+  top: 24px;
+}
+
+.header-top .toggle-menu i:nth-child(3) {
+  top: 32px;
+}
+
+.header-top.open-menu i:nth-child(1) {
+  top: 25px;
+  transform: rotateZ(45deg);
+}
+
+.header-top.open-menu i:nth-child(2) {
+  background: transparent;
+}
+
+.header-top.open-menu i:nth-child(3) {
+  top: 25px;
+  transform: rotateZ(-45deg);
+}
+
+.menu-wrapper {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  background: rgba(0, 47, 77, 0.25);
+  transition: all 3s;
+}
+
+.header-top.open-menu ~ .menu-wrapper {
+  opacity: 1;
+  padding: 80px 0;
+  z-index: 101;
+  height: calc(100vh - 70px);
+}
+
+.menu-wrapper ul {
+  display: flex;
+  padding: 0 10px;
+}
+
+.menu-wrapper li {
+  flex: 1;
+}
+
+.menu-wrapper li a {
+  display: block;
+  padding: 30px;
+  font-size: 20px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.menu-wrapper li:nth-child(odd) a,
+body.fp-viewing-fifthSection-1 .menu li:nth-child(5) a {
+  background: #962d3e;
+}
+
+.menu-wrapper li:nth-child(even) a {
+  background: #aa3346;
+}
+
+.menu-wrapper li:nth-child(odd) a:hover {
+  background: #9e2f41;
+}
+
+.menu-wrapper li:nth-child(even) a:hover {
+  background: #c53c52;
+}
+
+.menu-wrapper li.active a,
+body.fp-viewing-fifthSection-1 .menu li:last-child a {
+  background: #453659;
+}
+
+/* SECTION STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  padding: 0 10px;
+  transform: translateX(-50%);
+}
+
+.scroll-down a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+section {
+  text-align: center;
+}
+
+section .text-block {
+  max-width: 1000px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+section h1,
+section h2 {
+  font-size: 2.6em;
+  margin-bottom: 20px;
+}
+
+section h3 {
+  font-weight: normal;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+section h3 + p {
+  margin-top: 20px;
+}
+
+section .end {
+  margin-top: 30px;
+  font-size: 2.8em;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(300px);
+  transition: opacity, transform 1s;
+  transition-delay: 1s;
+}
+
+section p a {
+  text-decoration: underline;
+}
+
+/* SLIDENAV STYLES - fullPage.js 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.fp-slidesNav.fp-bottom {
+  bottom: 50px;
+}
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  background: white;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+}
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  background: transparent;
+  box-sizing: border-box;
+  border: 1px solid #24221f;
+}
+
+/* MQ STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 767px) {
+  .menu-wrapper ul {
+    flex-direction: column;
+  }
+
+  .menu-wrapper li {
+    margin-top: 1px;
+  }
+
+  .menu-wrapper li a {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 70%;
+  }
+
+  .header-top.open-menu ~ .menu-wrapper {
+    padding: 20px 0;
+  }
+
+  .menu-wrapper li a {
+    padding: 15px;
+  }
+}
